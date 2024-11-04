@@ -5,10 +5,28 @@
 int main(void) {
     const int MIN = 0;
     const int MAX = 6;
-    int n, num, vite = 3;
+    int n, num, vite;
     int ninsert = 0;
+    int difficolta;
     srand(time(NULL));
     n = rand() % (MAX - MIN + 1) + MIN;
+    printf("scegli il livello di difficola':\n");
+    printf("1. Facile (5 vite)\n");
+    printf("2. Medio printf(3 vite)\n");
+    printf("3. Difficile (2 vite)\n");
+    printf("inserisci il numero della difficola: ");
+    scanf("%d", &difficolta);
+    switch (difficolta) {
+        case 1: 
+            vite = 5;
+            break;
+        case 2: 
+            vite=3;
+            break;
+        case 3:
+            vite=2;
+            break;
+    }
 
     printf("Indovina il numero tra %d e %d. Hai %d vite.\n", MIN, MAX, vite);
 
